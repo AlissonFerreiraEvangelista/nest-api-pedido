@@ -1,0 +1,48 @@
+@apiurl = http://localhost:3000
+
+### 
+GET  {{apiurl}}/pedido/todos
+
+###
+GET  {{apiurl}}/pedido/1
+
+###
+POST {{apiurl}}/pedido/salva
+Content-Type: application/json
+
+{
+    "numero":"1615",
+    "valorTotal":"10.95",
+    "dt_pedido":"10/01/2021",
+    "cliente":{
+        "id":2,
+        "nome":"Aline",
+        "email":"Aline@gmail.com",
+        "telefone":"488555548",
+        "cupom":true
+    }
+     
+}
+
+###
+POST  {{apiurl}}/pedido/salva
+Content-Type: application/json
+
+{
+    "numero":"1576",
+    "valorTotal":"19.20",
+    "dt_pedido":"10-01-2021"   
+}
+
+###
+DELETE {{apiurl}}/pedido/1
+
+###
+PUT  {{apiurl}}/pedido/2
+Content-Type: application/json
+
+{
+    "numero":"1615",
+    "valorTotal":"100.50",
+    "dt_pedido":"10-01-2021"   
+}
