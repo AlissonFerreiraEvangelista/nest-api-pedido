@@ -1,0 +1,68 @@
+@apiurl = http://localhost:3000
+
+### 
+GET  {{apiurl}}/pessoa/todos
+
+###
+GET  {{apiurl}}/pessoa/1
+
+###
+POST {{apiurl}}/pessoa/salva
+Content-Type: application/json
+
+{
+    "nome":"Aline",
+    "email":"Aline@gmail.com",
+    "telefone":"488555548",  
+    "endereco":{ 
+        "id":1,      
+        "logradouro":"Casa da rua zero",
+        "numero":"151",
+        "bairro":"veneza",
+        "cidade":"Florida",
+        "complemento": "Casa",
+        "observacao":"rua dos bobos"     
+    }    
+}
+
+###
+POST {{apiurl}}/pessoa/salva
+Content-Type: application/json
+
+{
+    "nome":"Aline",
+    "email":"Aline@gmail.com",
+    "telefone":"488555548"   
+}
+
+###
+DELETE {{apiurl}}/pessoa/1
+
+###
+PUT   {{apiurl}}/pessoa/3
+Content-Type: application/json
+
+{
+    "nome":"Alice",
+    "email":"Aline@gmail.com",
+    "telefone":"488555548"
+}
+
+###
+PUT   {{apiurl}}/pessoa/3
+Content-Type: application/json
+
+{
+    "nome":"Aline",
+    "email":"Aline@gmail.com",
+    "telefone":"488555548",  
+    "endereco":{ 
+        "id":1,      
+        "logradouro":"Casa da rua zero",
+        "numero":"151",
+        "bairro":"veneza",
+        "cidade":"Florida",
+        "complemento": "Casa",
+        "observacao":"rua dos bobos"     
+    }    
+}

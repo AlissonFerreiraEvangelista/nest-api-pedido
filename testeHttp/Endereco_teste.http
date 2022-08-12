@@ -1,0 +1,37 @@
+@apiurl = http://localhost:3000
+
+### 
+GET  {{apiurl}}/endereco/todos
+
+###
+GET  {{apiurl}}/endereco/1
+
+###
+POST {{apiurl}}/endereco/salva
+Content-Type: application/json
+
+{     
+    "logradouro":"Casa da rua zero",
+    "numero":"151",
+    "bairro":"veneza",
+    "cidade":"Florida",
+    "complemento": "Casa",
+    "observacao":"rua dos bobos"      
+}
+
+###
+DELETE {{apiurl}}/endereco/1
+
+
+###
+PUT   {{apiurl}}/cliente/3
+Content-Type: application/json
+
+{     
+    "logradouro":"Casa da rua zero",
+    "numero":"151",
+    "bairro":"veneza",
+    "cidade":"Florida",
+    "complemento": "Casa",
+    "observacao":"rua dos bobos"          
+}

@@ -1,0 +1,33 @@
+@apiurl = http://localhost:3000
+
+### 
+GET  {{apiurl}}/fornecedor/todos
+
+###
+GET  {{apiurl}}/fornecedor/1
+
+###
+POST {{apiurl}}/fornecedor/salva
+Content-Type: application/json
+
+{
+    "nome":"Aline",
+    "email":"Aline@gmail.com",
+    "cnpj":"154.625.545/0001",
+    "inscricao_estadual":"0102154"   
+}
+
+###
+DELETE {{apiurl}}/fornecedor/1
+
+###
+PUT   {{apiurl}}/fornecedor/1
+Content-Type: application/json
+
+{
+    "nome":"Aline",
+    "email":"Aline@gmail.com",
+    "cnpj":"154.625.545/0001",
+    "inscricao_estadual":"0102154"   
+}
+

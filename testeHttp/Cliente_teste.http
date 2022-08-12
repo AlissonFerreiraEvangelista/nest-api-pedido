@@ -14,8 +14,7 @@ Content-Type: application/json
     "nome":"Aline",
     "email":"Aline@gmail.com",
     "telefone":"488555548",
-    "cupom":true
-     
+    "cupom":true  
 }
 
 ###
