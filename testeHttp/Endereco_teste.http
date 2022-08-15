@@ -20,18 +20,18 @@ Content-Type: application/json
 }
 
 ###
-DELETE {{apiurl}}/endereco/1
+DELETE {{apiurl}}/endereco/3
 
 
 ###
-PUT   {{apiurl}}/cliente/3
+PUT   {{apiurl}}/endereco/4
 Content-Type: application/json
 
 {     
-    "logradouro":"Casa da rua zero",
-    "numero":"151",
+    "logradouro":"Casa da rua um",
+    "numero":"152",
     "bairro":"veneza",
     "cidade":"Florida",
     "complemento": "Casa",
-    "observacao":"rua dos bobos"          
+    "observacao":"rua dos tanso"          
 }

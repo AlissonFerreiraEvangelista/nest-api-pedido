@@ -16,7 +16,7 @@ import { Pessoa } from './entity/pessoa.entity';
     username: "postgres",
     password: 'Ta$2506f',
     database: 'pedido',
-    entities: [Endereco,Pessoa,Pedido,Fornecedor,Cliente],
+    entities: [Endereco,Pessoa,Pedido,Fornecedor,Cliente, Pessoa],
     synchronize: true,
     autoLoadEntities:true,
   }),apiModule],

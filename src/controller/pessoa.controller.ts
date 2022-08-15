@@ -1,8 +1,32 @@
-import { Controller } from "@nestjs/common";
+import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
+import { Pessoa } from "src/entity/pessoa.entity";
+import { PessoaService } from "src/service/pessoa.service";
 
 
 
-@Controller()
+@Controller('pessoa')
 export class PessoaController{
 
+    constructor(private readonly pessoaService: PessoaService){}
+
+    @Post('salva')
+    async salva(@Body() pessoa: Pessoa){
+        return await this.pessoaService.criar(pessoa);    
+    }
+    @Get('todos')
+    async todos(){
+        return await this.pessoaService.achaTodos();
+    }
+    @Get(':id')
+    async achaUm(@Param() param){
+        return await this.pessoaService.achaUm(param.id);
+    }
+    @Put(':id')
+    async atualiza(@Param('id') id: number, pessoa: Pessoa){
+        return await this.pessoaService.atualiza(id, pessoa);
+    }
+    @Delete(':id')
+    async delete(@Param() id:number){
+        return await this.pessoaService.remove(id);
+    }
 }

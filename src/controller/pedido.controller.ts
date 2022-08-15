@@ -10,8 +10,10 @@ export class PedidoController{
 
     constructor(private readonly pedidoService: PedidoService){}
 
+    
+
     @Post('salva')
-    async salvar(@Body()pedido: Pedido){
+    async salva(@Body()pedido: Pedido){
         return this.pedidoService.criar(pedido)
     }
 

@@ -36,12 +36,12 @@ export class EnderecoService{
         }
     }
 
-    async atualiza(id: number, endereco: Endereco): Promise<Endereco>{
+    async atualiza(id: number, endereco: Endereco){
         const enderecoExist = await this.enderecoRepository.findOneBy({id});
         if(!enderecoExist){
             throw new Error('Endereco não existe');
         }else{
-            return enderecoExist;
+            return this.enderecoRepository.update(id, endereco);
         }
 
     }

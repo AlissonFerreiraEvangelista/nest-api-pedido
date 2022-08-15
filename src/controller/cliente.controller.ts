@@ -15,12 +15,12 @@ export class ClienteController{
     }
 
     @Get('todos')
-    async todos(){
+    async achaTodos(){
         return this.clienteService.achaTodos();
     }
 
     @Get(':id')
-    async um(@Param() param){
+    async achaUm(@Param() param){
         return this.clienteService.achaUm(param.id);
     }
 
