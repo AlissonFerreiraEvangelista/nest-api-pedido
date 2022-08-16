@@ -20,8 +20,8 @@ export class ClienteController{
     }
 
     @Get(':id')
-    async achaUm(@Param() param){
-        return this.clienteService.achaUm(param.id);
+    async achaUm(@Param('id') id: number){
+        return this.clienteService.achaUm(id);
     }
 
     @Put(':id')
@@ -30,8 +30,8 @@ export class ClienteController{
     }
 
     @Delete(':id')
-    async delete(@Param() param){
-        this.clienteService.remove(param.id);
+    async delete(@Param('id') id: number){
+        this.clienteService.remove(id);
     }
 
 

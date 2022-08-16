@@ -11,7 +11,7 @@ import { Fornecedor } from './entity/fornecedor.entity';
 import { Pedido } from './entity/pedido.entity';
 import { Pessoa } from './entity/pessoa.entity';
 import { ClienteService } from './service/cliente.service';
-import { EnderecoService } from './service/endereco.servico';
+import { EnderecoService } from './service/endereco.service';
 import { FornecedorService } from './service/fornecedor.service';
 import { PedidoService } from './service/pedido.service';
 import { PessoaService } from './service/pessoa.service';

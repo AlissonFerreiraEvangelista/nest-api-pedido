@@ -30,8 +30,8 @@ POST {{apiurl}}/pessoa/salva
 Content-Type: application/json
 
 {
-    "nome":"Aline",
-    "email":"Aline@gmail.com",
+    "nome":"Alisson",
+    "email":"Alisson@gmail.com",
     "telefone":"488555548"   
 }
 
@@ -39,7 +39,7 @@ Content-Type: application/json
 DELETE {{apiurl}}/pessoa/1
 
 ###
-PUT   {{apiurl}}/pessoa/3
+PUT   {{apiurl}}/pessoa/1
 Content-Type: application/json
 
 {
@@ -49,15 +49,16 @@ Content-Type: application/json
 }
 
 ###
-PUT   {{apiurl}}/pessoa/3
+PUT   {{apiurl}}/pessoa/1
 Content-Type: application/json
 
 {
-    "nome":"Aline",
-    "email":"Aline@gmail.com",
+    "id":1,
+    "nome":"Alisson",
+    "email":"Alisson@gmail.com",
     "telefone":"488555548",  
     "endereco":{ 
-        "id":1,      
+        "id":6,      
         "logradouro":"Casa da rua zero",
         "numero":"151",
         "bairro":"veneza",

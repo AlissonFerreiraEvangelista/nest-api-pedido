@@ -17,7 +17,7 @@ export class PessoaService{
     }
 
     async criar(@Body() pessoa: Pessoa): Promise<Pessoa>{
-        const pessoaExists = await this.pessoaRepository.findBy(pessoa);
+        const pessoaExists = await this.pessoaRepository.findOneBy(pessoa);
         if(pessoaExists){
             throw new Error ("Pessoa já Cadastrada");
         }else{
@@ -48,7 +48,7 @@ export class PessoaService{
         if(!pessoaExists){    
             throw new Error ("Pessoa não encontrada");
         }else{
-            this.pessoaRepository.update(id, pessoa);
+            return this.pessoaRepository.update(id, pessoa);
         }
     }
 

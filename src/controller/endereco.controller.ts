@@ -1,6 +1,6 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
 import { Endereco } from "src/entity/endereco.entity";
-import { EnderecoService } from "src/service/endereco.servico";
+import { EnderecoService } from "src/service/endereco.service";
 
 
 @Controller('endereco')

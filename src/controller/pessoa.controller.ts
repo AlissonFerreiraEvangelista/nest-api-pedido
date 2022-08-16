@@ -18,15 +18,15 @@ export class PessoaController{
         return await this.pessoaService.achaTodos();
     }
     @Get(':id')
-    async achaUm(@Param() param){
-        return await this.pessoaService.achaUm(param.id);
+    async achaUm(@Param('id') id: number){
+        return await this.pessoaService.achaUm(id);
     }
     @Put(':id')
-    async atualiza(@Param('id') id: number, pessoa: Pessoa){
+    async atualiza(@Param('id') id: number,@Body() pessoa: Pessoa){
         return await this.pessoaService.atualiza(id, pessoa);
     }
     @Delete(':id')
-    async delete(@Param() id:number){
+    async delete(@Param('id') id:number){
         return await this.pessoaService.remove(id);
     }
 }

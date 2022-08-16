@@ -1,5 +1,5 @@
 import { ApiProperty } from "@nestjs/swagger";
-import { Column, Entity, JoinColumn, ManyToOne, OneToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 import { Endereco } from "./endereco.entity";
 
 @Entity()
@@ -22,7 +22,7 @@ export class Pessoa{
     telefone: string;
 
     @ApiProperty({description: 'Endereço da Pessoa'})
-    @OneToOne(type => Endereco, endereco => endereco.pessoa)
+    @OneToOne(type => Endereco, endereco => endereco.pessoa,{cascade: true})
     @JoinColumn()
     endereco: Endereco;
     

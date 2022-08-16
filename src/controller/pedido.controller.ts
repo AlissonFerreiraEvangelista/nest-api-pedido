@@ -33,7 +33,7 @@ export class PedidoController{
     }
 
     @Delete(':id')
-    async delete(@Param() id:number){
+    async delete(@Param('id') id:number){
         this.pedidoService.remove(id);
     }
 }

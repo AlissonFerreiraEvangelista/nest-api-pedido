@@ -4,7 +4,7 @@
 GET  {{apiurl}}/cliente/todos
 
 ###
-GET  {{apiurl}}/cliente/1
+GET  {{apiurl}}/cliente/5
 
 ###
 POST {{apiurl}}/cliente/salva
@@ -25,12 +25,13 @@ POST  {{apiurl}}/cliente/salva
 Content-Type: application/json
 
 {
+    "id": 5,
     "nome":"Aline",
     "email":"Aline@gmail.com",
     "telefone":"488555548",
     "cupom":false,
     "endereco":{ 
-        "id":1,      
+        "id":5,      
         "logradouro":"Casa da rua zero",
         "numero":"151",
         "bairro":"veneza",
@@ -42,12 +43,12 @@ Content-Type: application/json
 }
 
 ###
-PUT   {{apiurl}}/cliente/3
+PUT   {{apiurl}}/cliente/4
 Content-Type: application/json
 
 {
     "nome":"Alice",
-    "email":"Aline@gmail.com",
+    "email":"Aline.2255@gmail.com",
     "telefone":"488555548",
     "cupom": true,
     "endereco":{ 
