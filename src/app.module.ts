@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { TypeOrmModule } from '@nestjs/typeorm';
+import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { apiModule } from './api.module';
 import { Cliente } from './entity/cliente.entity';
 import { Endereco } from './entity/endereco.entity';
@@ -12,16 +12,16 @@ import { Pessoa } from './entity/pessoa.entity';
 @Module({
   imports: [ConfigModule.forRoot(),
     TypeOrmModule.forRoot({
-    type: 'postgres',
-    host: 'localhost',
-    port: 5432,
-    username: process.env.DATABASE_USER,
-    password: process.env.DATABASE_PASSWORD,
-    database: 'pedido',
-    entities: [Endereco, Pessoa, Pedido, Fornecedor, Cliente, Pessoa],
+    type: process.env.TYPEORM_CONNECTION,
+    host: process.env.TYPEORM_HOST,
+    port: process.env.TYPEORM_PORT,
+    username: process.env.TYPEORM_USER,
+    password: process.env.TYPEORM_PASSWORD,
+    database: process.env.TYPEORM_DATABASE,
+    entities: [__dirname + '/**/*.entity{json,.ts}'],
     synchronize: true,
     autoLoadEntities:true,
-  }),apiModule],
+  } as TypeOrmModuleOptions),apiModule],
   controllers: [],
   providers: [],
 })

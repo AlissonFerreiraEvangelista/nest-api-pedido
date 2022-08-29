@@ -21,5 +21,6 @@ import { PessoaService } from './service/pessoa.service';
   imports: [TypeOrmModule.forFeature([Pessoa,Pedido,Endereco,Fornecedor,Cliente])],
   providers: [ClienteService, FornecedorService, EnderecoService,PedidoService, PessoaService],
   controllers: [PessoaController,ClienteController, EnderecoController, FornecedorController, PedidoController],
+  exports:[ClienteService],
 })
 export class apiModule {}
